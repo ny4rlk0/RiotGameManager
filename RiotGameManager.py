@@ -1,4 +1,4 @@
-#LOL, NO I DONT WANNA WAIT FOR YOUR CONSENT TO RAGEQUIT!, League of Legends / Valorant Fast Starter /QUITTER
+#LOL, NO I DONT WANNA WAIT FOR YOUR CONSENT TO RAGEQUIT!, League of Legends / Valorant Fast Starter /QUITTER https://github.com/ny4rlk0/RiotGameManager/
 import keyboard as key
 import subprocess as sub
 import os,time
