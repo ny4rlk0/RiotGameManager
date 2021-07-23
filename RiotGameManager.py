@@ -9,7 +9,7 @@ generic_riot_path="\\Riot Games\\Riot Client\\RiotClientServices.exe"
 t='"'
 def kill_process(): #Kill the game process
     i=0
-    for i in range(2*len(proc_list)):
+    for i in range(len(proc_list)):
         try: sub.Popen(['taskkill','/T','/F','/IM',f'{proc_list[i]}'], stdout=sub.DEVNULL, stderr = sub.DEVNULL , stdin = sub.DEVNULL)
         except: pass
         i=+1
