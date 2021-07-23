@@ -25,7 +25,7 @@ def start_process(game): #Start Game
     gamepath=find_game_path()
     try:
         if game=="lol": os.system(f"start /b {t}LeagueOfLegends{t} {t}{gamepath}{t} --launch-product=league_of_legends --launch-patchline=live")
-        elif game=="valorant": os.system(f"start /b {t}LeagueOfLegends{t} {t}{gamepath}{t} --launch-product=valorant --launch-patchline=live")
+        elif game=="valorant": os.system(f"start /b {t}Valorant{t} {t}{gamepath}{t} --launch-product=valorant --launch-patchline=live")
     except: pass
 def is_any_button_pressed():
     time.sleep(0.1) #Lowers the cpu usage significantly!
