@@ -11,7 +11,7 @@ def kill_process(): #Kill the game process
     i=0
     for i in range(len(proc_list)):
         try: sub.Popen(['taskkill','/T','/F','/IM',f'{proc_list[i]}'], stdout=sub.DEVNULL, stderr = sub.DEVNULL , stdin = sub.DEVNULL)
-        except: pass
+        except: continue
         i=+1
 def find_game_path(): #Find game path
     i=0
