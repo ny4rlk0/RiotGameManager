@@ -8,12 +8,13 @@ drive_letter_list=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","
 generic_riot_path="\\Riot Games\\Riot Client\\RiotClientServices.exe"
 t='"'
 def kill_process(): #Kill the game process
+    global repeat
     i=0
     repeat=True
     for i in range(len(proc_list)):
         if i==len(proclist) and repeat=True:
             i=0
-            repeate=False
+            repeat=False
         try: sub.Popen(['taskkill','/T','/F','/IM',f'{proc_list[i]}'], stdout=sub.DEVNULL, stderr = sub.DEVNULL , stdin = sub.DEVNULL)
         except: continue
         i=+1
