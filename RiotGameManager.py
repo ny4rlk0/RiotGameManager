@@ -1,31 +1,20 @@
-#LOL, NO I DONT WANNA WAIT FOR YOUR CONSENT TO RAGEQUIT!, League of Legends / Valorant Fast Starter /QUITTER https://github.com/ny4rlk0/RiotGameManager/
-import keyboard as key
-import subprocess as sub
-import os,time
-
+#League of Legends / Valorant Fast Starter /QUITTER https://github.com/ny4rlk0/RiotGameManager/
+import keyboard as key ;import subprocess as sub ;import os,time
 proc_list=["BsSndRpt.exe","LeagueClient.exe","LeagueClientUx.exe","LeagueClientUxRender.exe","jpatch.exe","LeagueofLegends.exe","LeagueCrashHandler.exe","RiotClientServices.exe","RiotClientUx.exe","RiotClientUxRender.exe","RiotClientCrashHandler.exe","VALORANT-Win64-Shipping.exe","VALORANT.exe","UnrealCEFSubProcess.exe"]
 drive_letter_list=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","R","S","T","U","V","Y","Z","X","W"]
 generic_riot_path="\\Riot Games\\Riot Client\\RiotClientServices.exe"
-t='"'
+t='"';nya,rlko="G","G"
 def kill_process(): #Kill the game process
-    global repeat
-    i=0
-    repeat=True
     for i in range(len(proc_list)):
-        if i==len(proc_list) and repeat==True:
-            i=0
-            repeat=False
-        try: sub.Popen(['taskkill','/T','/F','/IM',f'{proc_list[i]}'], stdout=sub.DEVNULL, stderr = sub.DEVNULL , stdin = sub.DEVNULL)
+        time.sleep(0.1)
+        try: proc=sub.Popen(['taskkill','/T','/F','/IM',f'{proc_list[i]}'], stdout=sub.DEVNULL, stderr = sub.DEVNULL , stdin = sub.DEVNULL) ; proc.wait()
         except: continue
-        i=+1
 def find_game_path(): #Find game path
-    i=0
     for i in range(len(drive_letter_list)):
-        try:
+        try: 
             gamepath=drive_letter_list[i]+":"+generic_riot_path
             if os.path.exists(gamepath): return gamepath
-        except: continue
-        i=+1
+        except: continue 
 def start_process(game): #Start Game
     gamepath=find_game_path()
     try:
