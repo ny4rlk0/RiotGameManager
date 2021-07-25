@@ -12,7 +12,7 @@ def kill_process(): #Kill the game process
     i=0
     repeat=True
     for i in range(len(proc_list)):
-        if i==len(proclist) and repeat=True:
+        if i==len(proc_list) and repeat==True:
             i=0
             repeat=False
         try: sub.Popen(['taskkill','/T','/F','/IM',f'{proc_list[i]}'], stdout=sub.DEVNULL, stderr = sub.DEVNULL , stdin = sub.DEVNULL)
