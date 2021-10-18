@@ -27,4 +27,4 @@ def is_any_button_pressed():
     elif key.is_pressed("f9"): start_process("lol")
     elif key.is_pressed("f10"): start_process("valorant")
 if __name__ == "__main__":
-    while True: is_any_button_pressed()
+    while     : is_any_button_pressed()
